@@ -1,0 +1,513 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## Zeppelin tutorial in Scala\nThis is the same tutorial, but using `scala` (Shift-Enter to Run)",
+      "dateUpdated": "Dec 15, 2015 3:30:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1450193256025_1779001077",
+      "id": "20151215-152736_11804445",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\u003ch2\u003eZeppelin tutorial in Scala\u003c/h2\u003e\n\u003cp\u003eThis is the same tutorial, but using \u003ccode\u003escala\u003c/code\u003e (Shift-Enter to Run)\u003c/p\u003e\n"
+      },
+      "dateCreated": "Dec 15, 2015 3:27:36 PM",
+      "dateStarted": "Dec 15, 2015 3:30:59 PM",
+      "dateFinished": "Dec 15, 2015 3:30:59 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%dep\nz.reset()\n\n// Add spark-csv package\nz.load(\"com.databricks:spark-csv_2.10:1.3.0\")",
+      "dateUpdated": "Dec 15, 2015 3:30:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "tableHide": false,
+        "editorHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1446406502874_-506131274",
+      "id": "20151101-193502_22093688",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "res0: org.apache.zeppelin.spark.dep.Dependency \u003d org.apache.zeppelin.spark.dep.Dependency@1b6074a\n"
+      },
+      "dateCreated": "Nov 1, 2015 7:35:02 PM",
+      "dateStarted": "Dec 15, 2015 3:03:02 PM",
+      "dateFinished": "Dec 15, 2015 3:03:15 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// DO NOT import org.apache.spark.sql.SQLContext\n// USE zeppelin default sqlContext\nval bankScala \u003d sqlContext.read\n    .format(\"com.databricks.spark.csv\")\n    .option(\"header\", \"true\")\n    .option(\"delimiter\",\";\")\n    .option(\"inferSchema\", \"true\")\n    .load(\"/vagrant/zeppelin_notebooks/bank.csv\") ",
+      "dateUpdated": "Dec 15, 2015 3:30:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1446406527427_1954150763",
+      "id": "20151101-193527_30504060",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "bankScala: org.apache.spark.sql.DataFrame \u003d [age: int, job: string, marital: string, education: string, default: string, balance: int, housing: string, loan: string, contact: string, day: int, month: string, duration: int, campaign: int, pdays: int, previous: int, poutcome: string, y: string]\n"
+      },
+      "dateCreated": "Nov 1, 2015 7:35:27 PM",
+      "dateStarted": "Dec 15, 2015 3:30:59 PM",
+      "dateFinished": "Dec 15, 2015 3:31:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.show()",
+      "dateUpdated": "Dec 15, 2015 3:30:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1446406297612_-116120128",
+      "id": "20151101-193137_9211420",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n|age|          job|marital|education|default|balance|housing|loan| contact|day|month|duration|campaign|pdays|previous|poutcome|  y|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\n| 30|   unemployed|married|  primary|     no|   1787|     no|  no|cellular| 19|  oct|      79|       1|   -1|       0| unknown| no|\n| 33|     services|married|secondary|     no|   4789|    yes| yes|cellular| 11|  may|     220|       1|  339|       4| failure| no|\n| 35|   management| single| tertiary|     no|   1350|    yes|  no|cellular| 16|  apr|     185|       1|  330|       1| failure| no|\n| 30|   management|married| tertiary|     no|   1476|    yes| yes| unknown|  3|  jun|     199|       4|   -1|       0| unknown| no|\n| 59|  blue-collar|married|secondary|     no|      0|    yes|  no| unknown|  5|  may|     226|       1|   -1|       0| unknown| no|\n| 35|   management| single| tertiary|     no|    747|     no|  no|cellular| 23|  feb|     141|       2|  176|       3| failure| no|\n| 36|self-employed|married| tertiary|     no|    307|    yes|  no|cellular| 14|  may|     341|       1|  330|       2|   other| no|\n| 39|   technician|married|secondary|     no|    147|    yes|  no|cellular|  6|  may|     151|       2|   -1|       0| unknown| no|\n| 41| entrepreneur|married| tertiary|     no|    221|    yes|  no| unknown| 14|  may|      57|       2|   -1|       0| unknown| no|\n| 43|     services|married|  primary|     no|    -88|    yes| yes|cellular| 17|  apr|     313|       1|  147|       2| failure| no|\n| 39|     services|married|secondary|     no|   9374|    yes|  no| unknown| 20|  may|     273|       1|   -1|       0| unknown| no|\n| 43|       admin.|married|secondary|     no|    264|    yes|  no|cellular| 17|  apr|     113|       2|   -1|       0| unknown| no|\n| 36|   technician|married| tertiary|     no|   1109|     no|  no|cellular| 13|  aug|     328|       2|   -1|       0| unknown| no|\n| 20|      student| single|secondary|     no|    502|     no|  no|cellular| 30|  apr|     261|       1|   -1|       0| unknown|yes|\n| 31|  blue-collar|married|secondary|     no|    360|    yes| yes|cellular| 29|  jan|      89|       1|  241|       1| failure| no|\n| 40|   management|married| tertiary|     no|    194|     no| yes|cellular| 29|  aug|     189|       2|   -1|       0| unknown| no|\n| 56|   technician|married|secondary|     no|   4073|     no|  no|cellular| 27|  aug|     239|       5|   -1|       0| unknown| no|\n| 37|       admin.| single| tertiary|     no|   2317|    yes|  no|cellular| 20|  apr|     114|       1|  152|       2| failure| no|\n| 25|  blue-collar| single|  primary|     no|   -221|    yes|  no| unknown| 23|  may|     250|       1|   -1|       0| unknown| no|\n| 31|     services|married|secondary|     no|    132|     no|  no|cellular|  7|  jul|     148|       1|  152|       1|   other| no|\n+---+-------------+-------+---------+-------+-------+-------+----+--------+---+-----+--------+--------+-----+--------+--------+---+\nonly showing top 20 rows\n\n"
+      },
+      "dateCreated": "Nov 1, 2015 7:31:37 PM",
+      "dateStarted": "Dec 15, 2015 3:31:00 PM",
+      "dateFinished": "Dec 15, 2015 3:31:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.printSchema()",
+      "dateUpdated": "Dec 15, 2015 3:30:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1446408815201_-1855336230",
+      "id": "20151101-201335_17949099",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "root\n |-- age: integer (nullable \u003d true)\n |-- job: string (nullable \u003d true)\n |-- marital: string (nullable \u003d true)\n |-- education: string (nullable \u003d true)\n |-- default: string (nullable \u003d true)\n |-- balance: integer (nullable \u003d true)\n |-- housing: string (nullable \u003d true)\n |-- loan: string (nullable \u003d true)\n |-- contact: string (nullable \u003d true)\n |-- day: integer (nullable \u003d true)\n |-- month: string (nullable \u003d true)\n |-- duration: integer (nullable \u003d true)\n |-- campaign: integer (nullable \u003d true)\n |-- pdays: integer (nullable \u003d true)\n |-- previous: integer (nullable \u003d true)\n |-- poutcome: string (nullable \u003d true)\n |-- y: string (nullable \u003d true)\n\n"
+      },
+      "dateCreated": "Nov 1, 2015 8:13:35 PM",
+      "dateStarted": "Dec 15, 2015 3:31:00 PM",
+      "dateFinished": "Dec 15, 2015 3:31:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.describe().show()",
+      "dateUpdated": "Dec 15, 2015 3:30:59 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala",
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1450192697110_118240410",
+      "id": "20151215-151817_25376527",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n|summary|               age|           balance|               day|          duration|          campaign|             pdays|          previous|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n|  count|              4521|              4521|              4521|              4521|              4521|              4521|              4521|\n|   mean| 41.17009511170095|1422.6578190665782|15.915284229152842|263.96129174961294| 2.793629727936297|39.766644547666445|0.5425790754257908|\n| stddev|10.575041217961267|2847.0887589185527| 8.246755126007518| 259.8278921907475|3.1094627120970313|100.11005093477695|1.6933750407187431|\n|    min|                19|             -3313|                 1|                 4|                 1|                -1|                 0|\n|    max|                87|             71188|                31|              3025|                50|               871|                25|\n+-------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+\n\n"
+      },
+      "dateCreated": "Dec 15, 2015 3:18:17 PM",
+      "dateStarted": "Dec 15, 2015 3:19:52 PM",
+      "dateFinished": "Dec 15, 2015 3:19:53 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "bankScala.registerTempTable(\"bankScala\")",
+      "dateUpdated": "Dec 15, 2015 3:31:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1446406388286_-1739052285",
+      "id": "20151101-193308_977882",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": ""
+      },
+      "dateCreated": "Nov 1, 2015 7:33:08 PM",
+      "dateStarted": "Dec 15, 2015 3:31:00 PM",
+      "dateFinished": "Dec 15, 2015 3:31:00 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect age, count(1) value\nfrom bankScala\nwhere age \u003c 30 \ngroup by age \norder by age",
+      "dateUpdated": "Dec 15, 2015 3:31:00 PM",
+      "config": {
+        "colWidth": 4.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1446406397053_-1928517310",
+      "id": "20151101-193317_28618335",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\n19\t4\n20\t3\n21\t7\n22\t9\n23\t20\n24\t24\n25\t44\n26\t77\n27\t94\n28\t103\n29\t97\n"
+      },
+      "dateCreated": "Nov 1, 2015 7:33:17 PM",
+      "dateStarted": "Dec 15, 2015 3:31:00 PM",
+      "dateFinished": "Dec 15, 2015 3:31:01 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect age, count(1) value \nfrom bankScala \nwhere age \u003c ${maxAge\u003d45} \ngroup by age \norder by age",
+      "dateUpdated": "Dec 15, 2015 3:31:00 PM",
+      "config": {
+        "colWidth": 4.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {
+          "maxAge": "45"
+        },
+        "forms": {
+          "maxAge": {
+            "name": "maxAge",
+            "defaultValue": "45",
+            "hidden": false
+          }
+        }
+      },
+      "jobName": "paragraph_1446406730828_97861558",
+      "id": "20151101-193850_28114587",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\n19\t4\n20\t3\n21\t7\n22\t9\n23\t20\n24\t24\n25\t44\n26\t77\n27\t94\n28\t103\n29\t97\n30\t150\n31\t199\n32\t224\n33\t186\n34\t231\n35\t180\n36\t188\n37\t161\n38\t159\n39\t130\n40\t142\n41\t135\n42\t141\n43\t115\n44\t105\n"
+      },
+      "dateCreated": "Nov 1, 2015 7:38:50 PM",
+      "dateStarted": "Dec 15, 2015 3:31:01 PM",
+      "dateFinished": "Dec 15, 2015 3:31:02 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql \nselect age, count(1) value \nfrom bankScala\nwhere marital\u003d\"${marital\u003dsingle,single|divorced|married}\"\ngroup by age \norder by age",
+      "dateUpdated": "Dec 15, 2015 3:31:00 PM",
+      "config": {
+        "colWidth": 4.0,
+        "graph": {
+          "mode": "multiBarChart",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "age",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "editorMode": "ace/mode/sql",
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {
+          "marital": "single"
+        },
+        "forms": {
+          "marital": {
+            "name": "marital",
+            "defaultValue": "single",
+            "options": [
+              {
+                "value": "single"
+              },
+              {
+                "value": "divorced"
+              },
+              {
+                "value": "married"
+              }
+            ],
+            "hidden": false
+          }
+        }
+      },
+      "jobName": "paragraph_1446406417518_-80137621",
+      "id": "20151101-193337_27586818",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "age\tvalue\n19\t4\n20\t3\n21\t7\n22\t9\n23\t17\n24\t13\n25\t33\n26\t56\n27\t64\n28\t78\n29\t56\n30\t92\n31\t86\n32\t105\n33\t61\n34\t75\n35\t46\n36\t50\n37\t43\n38\t44\n39\t30\n40\t25\n41\t19\n42\t23\n43\t21\n44\t20\n45\t15\n46\t14\n47\t12\n48\t12\n49\t11\n50\t8\n51\t6\n52\t9\n53\t4\n55\t3\n56\t3\n57\t2\n58\t7\n59\t2\n60\t5\n66\t2\n69\t1\n"
+      },
+      "dateCreated": "Nov 1, 2015 7:33:37 PM",
+      "dateStarted": "Dec 15, 2015 3:31:02 PM",
+      "dateFinished": "Dec 15, 2015 3:31:03 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "dateUpdated": "Dec 15, 2015 3:31:00 PM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "editorMode": "ace/mode/scala",
+        "enabled": true,
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1446406800534_-1238684958",
+      "id": "20151101-194000_31779817",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT"
+      },
+      "dateCreated": "Nov 1, 2015 7:40:00 PM",
+      "dateStarted": "Dec 15, 2015 3:31:02 PM",
+      "dateFinished": "Dec 15, 2015 3:31:03 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "CSV Scala",
+  "id": "2B2984S7M",
+  "angularObjects": {
+    "2B5S894X6": [],
+    "2B6Z5JQKS": [],
+    "2B7MJ53H9": [],
+    "2B967XE6T": [],
+    "2B8ASWNGR": [],
+    "2B8TUZJTC": [],
+    "2B7G42EYZ": [],
+    "2B63NRM4J": [],
+    "2B6UEZNWS": [],
+    "2B6NHWG9Y": [],
+    "2B5U8KY8D": [],
+    "2B8TKHK8A": [],
+    "2B9GUPF5P": []
+  },
+  "config": {
+    "looknfeel": "default"
+  },
+  "info": {}
+}
