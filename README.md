@@ -25,7 +25,7 @@ Go to `<YOUR_BOX_FOLDER>`, and edit the `Vagrantfile` to change the parameters:
 | *provider* | VM provider  | "virtualbox" |
 | *boxMaster* | OS in master node | "ubuntu/trusty32" |
 | *boxSlave* | OS in slave nodes | ubuntu/trusty32 |
-| *masterRAM* | Master's RAM in MB | 2048 |
+| *masterRAM* | Master's RAM in MB | 3072 |
 | *masterCPU* | Master's CPU cores | 2 |
 | *masterName* | name of the master node used in `scripts/spark-env-sh` | "spark-master" |
 | *masterIP* | private IP of master node | "10.20.30.100" |
