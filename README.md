@@ -14,6 +14,7 @@ To install the box, you must follow the next steps:
 2. Install [Vagrant].
 3. Install [Git].
 4. Clone this repository to a specific folder:
+
    ```sh 
    $ git clone https://github.com/mcolebrook/dsbox.git <YOUR_BOX_FOLDER>
    ```
