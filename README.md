@@ -9,6 +9,7 @@ This is a Linux (Ubuntu) box deployed by vagrant including the following Data Sc
 
 # Pre-deployment steps
 To install the box, you must follow the next steps:
+
 1. Install [VirtualBox]: if you use any other provider, you must change the `provider` parameter in the Vagrantfile.
 2. Install [Vagrant].
 3. Install [Git].
