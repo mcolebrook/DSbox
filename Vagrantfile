@@ -7,7 +7,7 @@ boxMaster = "ubuntu/trusty32" # system to be installed on master
 boxSlave = "ubuntu/trusty32"  # system to be installed on slaves
 
 #masterRAM = 4096              # RAM in MB
-masterRAM = 2048              # RAM in MB
+masterRAM = 3072              # RAM in MB
 masterCPUs = 2                # CPU cores
 masterName = "spark-master"   # name of the master node (used in scripts/spark-env-sh)
 masterIP = "10.20.30.100"     # private IP of master node
