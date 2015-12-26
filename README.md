@@ -89,9 +89,9 @@ $ vagrant ssh spark-master -c "bash /opt/spark/sbin/start-all.sh"
 ```
 To halt the cluster, just run `stop-all.sh`.
 Remember that you can access Spark info in the following ports:
-- Spark Master Web: [Spark Master]
-- Spark Worker Web: [Spark Worker]
-- Spark App Web: [Spark App]
+- [Spark Master Web UI]
+- [Spark Worker Web UI]
+- [Spark App Web UI]
 
 # Starting Jupyter
 The best way to start the Jupyter notebook is the following:
@@ -162,9 +162,9 @@ Thanks to the following people for sharing their work (in alphabetical order): [
 [RISE]: https://github.com/damianavila/RISE
 [Scala]: http://www.scala-lang.org
 [Spark]: http://spark.apache.org
-[Spark Master]: http://localhost:8080
-[Spark Worker]: http://localhost:8081
-[Spark App]: http://localhost:4040
+[Spark Master Web UI]: http://localhost:8080
+[Spark Worker Web UI]: http://localhost:8081
+[Spark App Web UI]: http://localhost:4040
 [test_helper]: https://github.com/hpec/test_helper
 [Vagrant]: https://www.vagrantup.com
 [VirtualBox]: https://www.virtualbox.org
