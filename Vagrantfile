@@ -6,20 +6,21 @@ provider = "virtualbox"       # VM provider
 boxMaster = "ubuntu/trusty32" # system to be installed on master
 boxSlave = "ubuntu/trusty32"  # system to be installed on slaves
 
-#masterRAM = 2048              # RAM in MB
-masterRAM = 4096              # RAM in MB
+#masterRAM = 4096              # RAM in MB
+masterRAM = 2048              # RAM in MB
 masterCPUs = 2                # CPU cores
 masterName = "spark-master"   # name of the master node (used in scripts/spark-env-sh)
 masterIP = "10.20.30.100"     # private IP of master node
 
-slaves = 5                   # number of slaves 
-slaveRAM = 4096               # RAM in MB
+slaves = 2                    # number of slaves 
+#slaveRAM = 2048               # RAM in MB
+slaveRAM = 1024               # RAM in MB
 slaveCPUs = 2                 # CPU cores
 slaveName = "spark-slave"     # names of the slave nodes with a number appended
 slavesIP = "10.20.30.10"      # private IPs of slaves appending a number
 
 IPythonPort = 8001            # IPython/Jupyter port to forward (set in IPython config)
-SparkMasterPort = 8080        # SPARK_MASTER_WEBUI_PORTT
+SparkMasterPort = 8080        # SPARK_MASTER_WEBUI_PORT
 SparkWorkerPort = 8081        # SPARK_WORKER_WEBUI_PORT
 SparkAppPort = 4040           # Spark app web UI port
 RStudioPort = 8787            # RStudio server port

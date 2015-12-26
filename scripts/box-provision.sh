@@ -56,8 +56,12 @@ done
 SCRIPTS="00-init.sh 10-java-python-scala.sh 20-spark.sh"
 
 SCRIPTS_PATH=/vagrant/scripts
-export SSH_KEYS_PATH=/vagrant/ssh_keys
+SSH_KEYS_PATH=/vagrant/ssh_keys
 export SPARK_HOME=/opt/spark
+
+if ! [ -d $SSH_KEYS_PATH ]; then
+  sudo -u vagrant mkdir $SSH_KEYS_PATH
+fi
 
 if [[ "$TYPE" == "MASTER" ]]; then
   # create key and copy to /vagrant/ssh_keys
@@ -75,7 +79,6 @@ if [[ "$TYPE" == "MASTER" ]]; then
   44-irkernel.sh
   45-jupyter-extensions.sh
   50-rstudio-server.sh
-  #60-zeppelin.sh
   99-clean.sh
   "
 else
