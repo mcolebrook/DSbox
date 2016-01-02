@@ -103,7 +103,7 @@ $ cd /vagrant/jupyter-notebooks
 $ jupyter-notebook
 ```
 Inside the folder `jupyter-notebooks` you may find some sample notebooks.
-Then, go to your favorite browser and type in `localhost:8081`.
+Then, go to your favorite browser and type in [`localhost:8081`](http://localhost:8081).
 Besides, you can also start the Jupyter notebook with `pyspark` as the default interpreter by using the script `scripts/start-pyspark-notebook.sh`.
 Remember that inside the Jupyter notebook you can:
 * Code your scripts in Python 2, Python 3, R, and Scala 2.10.
@@ -112,7 +112,7 @@ Remember that inside the Jupyter notebook you can:
 To stop the notebook, just press the keys `Ctrl+C`.
 
 # Starting RStudio
-The RStudio Server daemon should be alreaday running in the background, so you only have to type in your browser `localhost:8787`. In order to work with Spark, you have to run the commands inside the `config.R` script.
+The RStudio Server daemon should be alreaday running in the background, so you only have to type in your browser [`localhost:8787`](http://localhost:8787). In order to work with Spark, you have to run the commands inside the `config.R` script.
 
 # Installing Zeppelin
 I recommend you to build Zeppelin aside from the provision of the master node, since it takes a long time to complete the compilation.
