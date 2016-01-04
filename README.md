@@ -103,7 +103,7 @@ $ cd /vagrant/jupyter-notebooks
 $ jupyter-notebook
 ```
 Inside the folder `jupyter-notebooks` you may find some sample notebooks.
-Then, go to your favorite browser and type in [`localhost:8081`](http://localhost:8081).
+Then, go to your favorite browser and type in [`localhost:8001`](http://localhost:8001).
 Besides, you can also start the Jupyter notebook with `pyspark` as the default interpreter by using the script `scripts/start-pyspark-notebook.sh`.
 Remember that inside the Jupyter notebook you can:
 * Code your scripts in Python 2, Python 3, R, and Scala 2.10.
