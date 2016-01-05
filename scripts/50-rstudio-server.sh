@@ -5,7 +5,13 @@ echo # install RStudio Server
 # http://tuxette.nathalievilla.org/?p=1606
 # gabrielebaldassarre.com/2015/07/07/how-to-install-rstudio-server-in-a-production-ready-ubuntu-environment/
 
-RSTUDIO_SERVER_FILE=rstudio-server-0.99.486-i386.deb
+RSTUDIO_SERVER_FILE=rstudio-server-0.99.491-i386.deb
+
+SYSTEM=`uname -m`
+if [ "$SYSTEM" == "x86_64" ]; then 
+  RSTUDIO_SERVER_FILE=rstudio-server-0.99.491-amd64.deb
+fi
+
 RSTUDIO_SERVER_URL="https://download2.rstudio.org/$RSTUDIO_SERVER_FILE"
 #TEMP_DIR=/tmp
 APPS_DIR=/vagrant/apps

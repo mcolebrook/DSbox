@@ -2,9 +2,10 @@
 This is a Linux (Ubuntu) box deployed by vagrant including the following Data Science apps:
 - [Spark] 1.5.2: one master node and up to 9 slaves. 
 - [Jupyter] 4.0.6 (IPython 4.0.1): kernels for Python 2 & 3, R, and Scala 2.10. It also includes [RISE], [test_helper], and [IPython-extensions].
-- [Java JDK 7] (1.7.0_91).
 - [Python] 2 and 3.
 - [R] version 3.2.3 (2015-12-10) -- "Wooden Christmas-Tree".
+- [RStudio Server] v0.99.491.
+- [Java JDK 7] (1.7.0_91).
 - [Scala] 2.10.
 
 # Pre-deployment steps
@@ -161,6 +162,7 @@ Thanks to the following people for sharing their work (in alphabetical order): [
 [Python]: https://www.python.org
 [R]: https://cran.r-project.org
 [RISE]: https://github.com/damianavila/RISE
+[RStudio Server]: https://www.rstudio.com/products/RStudio/#Server
 [Scala]: http://www.scala-lang.org
 [Spark]: http://spark.apache.org
 [Spark Master Web UI]: http://localhost:8080
