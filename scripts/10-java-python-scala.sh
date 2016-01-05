@@ -4,12 +4,11 @@ echo "# install java"
 JAVA_JDK=openjdk-7-jdk
 HOME=/home/vagrant
 BASHRC=$HOME/.bashrc
+JAVA_DIR=/usr/lib/jvm/java-7-openjdk-i386
 SYSTEM=`uname -m`
 
 if [ "$SYSTEM" == "x86_64" ]; then 
   JAVA_DIR=/usr/lib/jvm/java-7-openjdk-amd64
-else
-  JAVA_DIR=/usr/lib/jvm/java-7-openjdk-i386
 fi
 
 sudo apt-get -y install "$JAVA_JDK" libjansi-java
