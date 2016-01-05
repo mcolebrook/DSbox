@@ -27,6 +27,7 @@ sudo apt-get -y update
 sudo apt-get -y install npm libfontconfig
 
 sudo git clone $ZEPPELIN_GIT $ZEPPELIN_HOME
+cd $ZEPPELIN_HOME
 # checkout to version 0.5.5
 sudo git checkout e4743e71d2421f5b6950f9e0f346f07bb84f1671
 
