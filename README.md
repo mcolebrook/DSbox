@@ -113,7 +113,7 @@ Remember that inside the Jupyter notebook you can:
 To stop the notebook, just press the keys `Ctrl+C`.
 
 # Starting RStudio
-The RStudio Server daemon should be alreaday running in the background, so you only have to type in your browser [`localhost:8787`](http://localhost:8787). In order to work with Spark, you have to run the commands inside the `config.R` script.
+The RStudio Server daemon should be alreaday running in the background, so you only have to type in your browser [`localhost:8787`](http://localhost:8787). In order to work with Spark, you have to run the commands inside the `config.R` script. You may find helpful this [RStudio cheat sheet].
 
 # Installing Zeppelin
 I recommend you to build Zeppelin aside from the provision of the master node, since it takes a long time to complete the compilation.
@@ -163,6 +163,7 @@ Thanks to the following people for sharing their work (in alphabetical order): [
 [R]: https://cran.r-project.org
 [RISE]: https://github.com/damianavila/RISE
 [RStudio Server]: https://www.rstudio.com/products/RStudio/#Server
+[RStudio cheat sheet]: http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf
 [Scala]: http://www.scala-lang.org
 [Spark]: http://spark.apache.org
 [Spark Master Web UI]: http://localhost:8080
