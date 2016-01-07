@@ -7,6 +7,7 @@ This is a Linux (Ubuntu) box deployed by vagrant including the following Data Sc
 - [RStudio Server] v0.99.491.
 - [Java JDK 7] (1.7.0_91).
 - [Scala] 2.10.
+It has been succesfully tested on both `ubuntu/trusty32` and `ubuntu/trusty64` systems.
 
 # Pre-deployment steps
 To install the box, you must follow the next steps:
