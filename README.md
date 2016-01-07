@@ -139,8 +139,10 @@ Finally, to start working with Zeppelin you may use the notebooks inside the fol
 # License
 GNU. Please refer to the [LICENSE] file in this repository.
 
-# Acknowledgements
-Thanks to the following people for sharing their work (in alphabetical order): [Adobe Research], [Damián Avila], [Dan Koch], [Felix Cheung], [Francisco Javier Pulido], [Gustavo Arjones], [IBM Cloud Emerging Technologies], [Jee Vang], [Jeffrey Thompson], [José A. Dianes], [Maloy Manna], [NGUYEN Trong Khoa], and [Peng Cheng].
+# Acknowledgements (in alphabetical order)
+Thanks to the following people for sharing their projects: [Adobe Research], [Damián Avila], [Dan Koch], [Felix Cheung], [Francisco Javier Pulido], [Gustavo Arjones], [IBM Cloud Emerging Technologies], [Jee Vang], [Jeffrey Thompson], [José A. Dianes], [Maloy Manna], [NGUYEN Trong Khoa], and [Peng Cheng].
+
+Thanks also to the following people for pointing me out some bugs: [Christos Iraklis Tsatsoulis].
 
 [Adobe Research]: https://github.com/adobe-research
 [Damián Avila]: https://github.com/damianavila
@@ -155,6 +157,8 @@ Thanks to the following people for sharing their work (in alphabetical order): [
 [Maloy Manna]: https://github.com/dnafrance
 [NGUYEN Trong Khoa]: http://www.trongkhoanguyen.com
 [Peng Cheng]: http://github.com/tribbloid
+
+[Christos Iraklis Tsatsoulis]: https://www.linkedin.com/in/christos-iraklis-tsatsoulis-165b1124
 
 [Git]: https://git-scm.com/downloads
 [IPython-extensions]: https://github.com/ipython-contrib/IPython-extensions
