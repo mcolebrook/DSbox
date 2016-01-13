@@ -46,7 +46,7 @@ Go to `<YOUR_BOX_FOLDER>`, and edit the `Vagrantfile` to change the parameters:
 | *ZeppelinPort* | Zeppelin default port is 8080 -> conflict with Spark | 8888 |
 | *SlidesPort* | `jupyter-nbconvert <file.ipynb> --to slides --post serve` | 8000 |
 
-# Starting up and shuting down the cluster
+# Starting up and shutting down the cluster
 You have several ways to start up the cluster.
 
 ## Deploy the master and all the slaves
