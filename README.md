@@ -54,7 +54,19 @@ To deploy the cluster with one master node and two slave nodes by default:
 ```sh 
 $ vagrant up
 ```
-Bear in mind that the whole process (bringing master+slaves up and the provisioning) may take several minutes!!
+Bear in mind that the whole process (bringing master+slaves up and the provisioning) may take **several minutes**!! On my Intel Core i7-4790 CPU (4 cores @ 3.60GHz) with 32 Gb RAM, I got the following times:
+
+### Master
+```sh
+==> spark-master: END provisioning 2016/**/** **:**:**
+==> spark-master: TOTAL TIME: 788 seconds
+```
+
+### Slaves
+```sh
+==> spark-slave-1: END provisioning 2016/**/** **:**:**
+==> spark-slave-1: TOTAL TIME: 228 seconds
+```
 
 ## Deploy only the master
 In case you only want to deploy the master node:
