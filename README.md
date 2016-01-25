@@ -7,6 +7,7 @@ This is a Linux (Ubuntu) box deployed by vagrant including the following Data Sc
 - [RStudio Server] v0.99.491.
 - [Java JDK 7] (1.7.0_91).
 - [Scala] 2.10.
+- [TensorFlow] 0.6.0: for Python 2 and 3, but **ONLY for 64-bit systems**.
 
 It has been succesfully tested on both `ubuntu/trusty32` and `ubuntu/trusty64` systems.
 
@@ -188,6 +189,7 @@ Thanks also to the following people for pointing me out some bugs: [Carlos Pére
 [Spark Master Web UI]: http://localhost:8080
 [Spark Worker Web UI]: http://localhost:8081
 [Spark App Web UI]: http://localhost:4040
+[TensorFlow]: https://www.tensorflow.org/
 [test_helper]: https://github.com/hpec/test_helper
 [Vagrant]: https://www.vagrantup.com
 [VirtualBox]: https://www.virtualbox.org
