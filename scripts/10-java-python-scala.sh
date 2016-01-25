@@ -24,6 +24,14 @@ echo "# install python"
 sudo apt-get -y install build-essential python-pip python-dev python3-pip python3-dev libzmq3 libzmq3-dev
 #libfreetype6-dev libxft-dev
 
+# install tensorflow
+if [ "$SYSTEM" == "x86_64" ]; then
+  echo "# installing TensorFlow"
+  sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp27-none-linux_x86_64.whl
+  sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.6.0-cp34-none-linux_x86_64.whl  
+fi
+
+
 TEMP_DIR=/tmp
 
 echo "# install scala 2.10"
