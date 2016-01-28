@@ -150,6 +150,16 @@ $ vagrant ssh spark-master -c "bash /opt/zeppelin/bin/zeppelin-daemon.sh start"
 ```
 Finally, to start working with Zeppelin you may use the notebooks inside the folder `/vagrant/zeppelin_notebooks`.
 
+# Installing `scikit-learn` and `tensorflow`
+You may install these two libraries running the following lines:
+```sh
+$ vagrant ssh spark-master
+$ cd /vagrant/scripts
+$ sudo ./61-scikit-learn-tensorflow.sh
+```
+
+Remember that Tensor Flow is available for **64-bit systems** only.
+
 # License
 GNU. Please refer to the [LICENSE] file in this repository.
 
