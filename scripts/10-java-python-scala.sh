@@ -23,6 +23,7 @@ fi
 echo "# install python"
 sudo apt-get -y install build-essential python-pip python-dev python3-pip python3-dev libzmq3 libzmq3-dev
 #libfreetype6-dev libxft-dev
+sudo apt-get -y install python-numpy python-scipy python3-numpy python3-scipy
 
 # install tensorflow
 if [ "$SYSTEM" == "x86_64" ]; then

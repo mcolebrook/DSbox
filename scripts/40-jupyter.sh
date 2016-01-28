@@ -52,8 +52,9 @@ sudo chown -R vagrant:vagrant $HOME/.local
 #sudo apt-get build-dep matplotlib
 #sudo pip install matplotlib
 #sudo pip3 install matplotlib 
-sudo apt-get -y install python-matplotlib python-numpy python-scipy
-sudo apt-get -y install python3-matplotlib python3-numpy python3-scipy
+#sudo apt-get -y install python-matplotlib python-numpy python-scipy
+#sudo apt-get -y install python3-matplotlib python3-numpy python3-scipy
+sudo apt-get -y install python-matplotlib python3-matplotlib
 
 #echo "export PATH=$PATH:$ANACONDA_DIR/bin" >> $BASHRC
 #echo "export PYTHONPATH=/usr/local/lib/python2.7/dist-packages:/opt/anaconda/lib/python2.7/site-packages:$PYTHONPATH" >> $BASHRC
