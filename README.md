@@ -7,6 +7,7 @@ This is a Linux (Ubuntu) box deployed by vagrant including the following Data Sc
 - [RStudio Server] v0.99.491.
 - [Java JDK 7] (1.7.0_91).
 - [Scala] 2.10.
+- [Zeppelin] 0.5.5.
 - [scikit-learn] 0.17: for Python 2 and 3.
 - [TensorFlow] 0.6.0: for Python 2 and 3, but **ONLY for 64-bit systems**.
 
@@ -205,3 +206,4 @@ Thanks also to the following people for pointing me out some bugs: [Carlos Pére
 [test_helper]: https://github.com/hpec/test_helper
 [Vagrant]: https://www.vagrantup.com
 [VirtualBox]: https://www.virtualbox.org
+[Zeppelin]: https://github.com/apache/incubator-zeppelin
