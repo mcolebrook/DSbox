@@ -17,13 +17,18 @@ BASHRC=$HOME/.bashrc
 
 # install jupyter with python3 as default kernel
 # http://totoprojects.blogspot.com.es/ 
+# http://stackoverflow.com/questions/30492623/using-both-python-2-x-and-python-3-x-in-ipython-notebook
+# https://github.com/ipython/ipython/pull/8877
+# https://github.com/jupyter/jupyter/issues/52
 sudo pip3 install jupyter
 
 # install ipython2 ...
 sudo pip install jupyter
 
 # ... and then install python2 kernel in jupyter
-sudo ipython2 kernelspec install-self
+# THIS LINE WON'T WORK!! #sudo ipython2 kernelspec install-self
+# try this:
+sudo python2 -m ipykernel install
 
 # create config
 #$ANACONDA_DIR/bin/jupyter notebook --generate-config
@@ -52,9 +57,9 @@ sudo chown -R vagrant:vagrant $HOME/.local
 #sudo apt-get build-dep matplotlib
 #sudo pip install matplotlib
 #sudo pip3 install matplotlib 
-#sudo apt-get -y install python-matplotlib python-numpy python-scipy
-#sudo apt-get -y install python3-matplotlib python3-numpy python3-scipy
-sudo apt-get -y install python-matplotlib python3-matplotlib
+
+sudo apt-get -y install python-matplotlib python-numpy python-scipy
+sudo apt-get -y install python3-matplotlib python3-numpy python3-scipy
 
 #echo "export PATH=$PATH:$ANACONDA_DIR/bin" >> $BASHRC
 #echo "export PYTHONPATH=/usr/local/lib/python2.7/dist-packages:/opt/anaconda/lib/python2.7/site-packages:$PYTHONPATH" >> $BASHRC
