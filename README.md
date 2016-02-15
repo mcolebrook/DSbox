@@ -24,6 +24,10 @@ To install the box, you must follow the next steps:
 $ git clone https://github.com/mcolebrook/dsbox.git <YOUR_BOX_FOLDER>
 ```
 
+**Remark**: some Windows users told me that they got line-ending issues (see [GitHub Help]) after cloning and starting up de box. To  fix this problem, and **BEFORE CLONING** the box, just type:
+
+`$ git config --global core.autocrlf true`
+
 # Config parameters
 Go to `<YOUR_BOX_FOLDER>`, and edit the `Vagrantfile` to change the parameters:
 
@@ -187,6 +191,7 @@ Thanks also to the following people for pointing me out some bugs: [Carlos Pére
 [Christos Iraklis Tsatsoulis]: https://www.linkedin.com/in/christos-iraklis-tsatsoulis-165b1124
 
 [Git]: https://git-scm.com/downloads
+[GitHub Help]: https://help.github.com/articles/dealing-with-line-endings
 [IPython-extensions]: https://github.com/ipython-contrib/IPython-extensions
 [Java JDK 7]: http://openjdk.java.net/projects/jdk7
 [Jupyter]: http://jupyter.org
