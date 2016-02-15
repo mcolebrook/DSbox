@@ -1,4 +1,4 @@
-# Data Science box (dsbox)
+# Data Science box (DSbox)
 This is a Linux (Ubuntu) box deployed by vagrant including the following Data Science apps:
 - [Spark] 1.5.2: one master node and up to 9 slaves. 
 - [Jupyter] 4.0.6 (IPython 4.0.1): kernels for Python 2 & 3, R, and Scala 2.10. It also includes [RISE], [test_helper], and [IPython-extensions].
