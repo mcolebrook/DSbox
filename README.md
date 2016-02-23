@@ -24,7 +24,7 @@ To install the box, you must follow the next steps:
 $ git clone https://github.com/mcolebrook/dsbox.git <YOUR_BOX_FOLDER>
 ```
 
-**Remark**: some Windows users told me that they got line-ending issues (see [GitHub Help]) after cloning and starting up de box. To  fix this problem, and **BEFORE CLONING** the box, just type:
+**Remark**: some Windows users told me that they got line-ending issues (see [GitHub Help]) after cloning and starting up the box. To  fix this problem, and **BEFORE CLONING** the box, just type:
 
 `$ git config --global core.autocrlf true`
 
