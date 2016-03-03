@@ -26,7 +26,7 @@ $ git clone https://github.com/mcolebrook/dsbox.git <YOUR_BOX_FOLDER>
 
 **Remark**: some Windows users told me that they got line-ending issues (see [GitHub Help]) after cloning and starting up the box. To  fix this problem, and **BEFORE CLONING** the box, just type:
 
-`$ git config --global core.autocrlf true`
+`$ git config --global core.autocrlf input`
 
 # Config parameters
 Go to `<YOUR_BOX_FOLDER>`, and edit the `Vagrantfile` to change the parameters:
