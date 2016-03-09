@@ -41,7 +41,7 @@ Go to `<YOUR_BOX_FOLDER>`, and edit the `Vagrantfile` to change the parameters:
 | *masterName* | name of the master node used in `scripts/spark-env-sh` | "spark-master" |
 | *masterIP* | private IP of master node | "10.20.30.100" |
 | *slaves*| # of slaves | 2 (max 9) |
-| *slaveRAM* | Slave's RAM in MB | 1024 |
+| *slaveRAM* | Slave's RAM in MB | 2048 |
 | *slaveCPU* | Slave's CPU cores | 2 |
 | *slaveName* | base name for slave nodes | "spark-slave" |
 | *slavesIP* | base private IP for slave nodes | "10.20.30.10" |
