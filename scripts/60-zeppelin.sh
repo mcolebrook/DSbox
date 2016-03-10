@@ -66,6 +66,6 @@ cd $ZEPPELIN_HOME/..
 sudo ln -s /vagrant/scripts/zeppelin-env.sh $ZEPPELIN_HOME/conf/zeppelin-env.sh
 
 # this is the only way to make zeppelin start OK
-#sudo chown -R vagrant:vagrant $ZEPPELIN_HOME
+sudo chown -R vagrant:vagrant $ZEPPELIN_HOME
 #sudo env "PATH=$PATH" /opt/zeppelin/bin/zeppelin-daemon.sh start
 #/opt/zeppelin/bin/zeppelin-daemon.sh start
